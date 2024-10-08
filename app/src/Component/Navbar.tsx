@@ -7,7 +7,8 @@ import Insta from "../Asset/Igcopy.png";
 function Navbar() {
 
   const onMail = () => {
-    window.location.href = "mailto:ilhamsidiq62@gmail.com";
+     const email = "ilhamsidiq62@gmail.com";
+  window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
   }
 
   const onGithub = () => {
