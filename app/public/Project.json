@@ -1,0 +1,56 @@
+{
+  "Project": [
+    {
+      "id": 1,
+      "date": "29 April 2024",
+      "title": "Poke App",
+      "banner": "https://i.ibb.co.com/DDpwkD3k/OIP.jpg",
+      "description": "Poke App is an application designed for Pokémon fans, providing easy access to a complete Pokédex and an efficient search feature. Users can explore various Pokémon and view detailed information such as names, types, and basic statistics. With an intuitive interface, Poke App allows users to quickly search for specific Pokémon by simply typing in the name or Pokédex number. The app can be accessed with a free email and an admin password, ensuring secure entry. Built using React and Tailwind CSS, Poke App is the perfect resource for fans, whether beginners or experts, who want to deepen their knowledge of the Pokémon world.",
+      "responsibilities": [
+        "User Authentication: Implement a secure login system allowing users to access the app with a free email and admin password, ensuring data protection and user privacy.",
+        "Pokedex Integration: Develop a comprehensive database of Pokémon, enabling users to browse and view detailed information including names, types, abilities, and basic statistics.",
+        "Search Functionality: Create an efficient search feature that allows users to quickly find specific Pokémon by entering names or Pokédex numbers.",
+        "Performance Optimization: Optimize the app's performance for fast loading times and smooth interactions, enhancing overall user satisfaction."
+      ]
+    },
+
+    {
+      "id": 2,
+      "date": "30 Juli 2024",
+      "title": "Mobilisayur",
+      "banner": "https://i.ibb.co.com/cXt9d9nz/logo-mobilisayur.png",
+      "description": "Mobilisayur is an innovative web platform that simplifies the online buying and selling of fresh fruits and vegetables . Designed to meet the needs of modern society, Mobilisayur connects local farmers and traders with consumers seeking high-quality products . With a user-friendly interface and straightforward transaction process, consumers can easily find and purchase fresh produce directly from the source . Built using advanced technologies such as Next.js, CSS, Tailwind, Python, Railway, MySQL, Vercel, Heroku, and GitHub , the platform ensures optimal performance, security , and a seamless user experience . Mobilisayur not only supports the local economy but is also committed to providing quality products and promoting sustainable agriculture.",
+      "responsibilities": [
+        "Designed and implemented a filtering system that significantly aided item classification, leading to an overall increase in user satisfaction based on positive feedback received during the evaluation phase.",
+        "Created a user-friendly dashboard layout that allowed users to complete tasks more efficiently, reducing the need for technical support requests.",
+        "Developed and optimized the MySQL database and utilized Python for backend development , significantly improving data retrieval times and enhancing overall application performance.",
+        "Integrated guest access features that successfully attracted more users to register, resulting in a noticeable increase in the number of registered users."
+      ]
+    },
+
+    {
+      "id": "3",
+      "date": "6 November 2024",
+      "title": "Masakin App",
+      "banner": "https://i.ibb.co.com/DgSVwQ7Z/Screenshot-2024-11-28-123950.png",
+      "description": "Masakin is an innovative web application designed to help users easily discover recipes from various countries. The application offers detailed information about recipes, including ingredients, cooking steps, and supporting video descriptions, allowing users to cook with confidence. With a responsive and user-friendly interface, Masakin provides an enjoyable cooking experience and makes it easier for users to find the recipe references they need.",
+      "responsibilities": [
+        "Successfully created a responsive interface that reduced page load time by 10%, increasing user dwell time on the recipe detail page.",
+        "Implemented a recipe detail feature that increased visits to the recipe page in the first month after launch.",
+        "We have identified and fixed some bugs during the testing phase, improving user satisfaction based on feedback received.",
+        "Successfully coordinated cross-team collaboration , reducing feature development time by 10%, allowing other features to be launched on schedule."
+      ]
+    },
+
+    {
+        "id": 4,
+        "date": "25 November 2024 - 25 Januari 2025",
+        "title": "Cerdas Financial",
+        "banner": "https://i.ibb.co.com/8DdZdqBM/Screenshot-2025-02-13-132139.png",
+        "description": "Cerdas Financial is a platform that provides financial education resources to help individuals manage their finances better. We offer easy-to-understand content, ranging from budgeting basics to advanced investment strategies, with practical tips and real-life examples to support smarter financial decisions.",
+        "responsibilities":[
+
+        ]
+    }
+  ]
+}

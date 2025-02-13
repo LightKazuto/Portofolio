@@ -1,0 +1,58 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "title": "Foto 1",
+      "url": "https://i.ibb.co.com/RkXH7Bcd/M2-A.png",
+      "description": "Deskripsi foto 1"
+    },
+    {
+      "id": 2,
+      "title": "Foto 2",
+      "url": "https://i.ibb.co.com/4g8H3H7n/M4-A.png",
+      "description": "Deskripsi foto 2"
+    },
+    {
+      "id": 3,
+      "title": "Foto 3",
+      "url": "https://i.ibb.co.com/8gprg0Ws/M3-A.png",
+      "description": "Deskripsi foto 3"
+    },
+    {
+      "id": 4,
+      "title": "Foto 4",
+      "url": "https://i.ibb.co.com/8gPJKQWD/M1-A.png",
+      "description": "Deskripsi foto 4"
+    },
+    {
+      "id": 5,
+      "title": "Foto 5",
+      "url": "https://i.ibb.co.com/6RWzRD5p/Screenshot-2024-06-20-225730.png",
+      "description": "Deskripsi foto 5"
+    },
+    {
+      "id": 6,
+      "title": "Foto 6",
+      "url": "https://i.ibb.co.com/wrc0cjs7/Screenshot-2024-05-23-203420.png",
+      "description": "Deskripsi foto 6"
+    },
+    {
+      "id": 7,
+      "title": "Foto 7",
+      "url": "https://i.ibb.co.com/gZ3BZMLQ/Screenshot-2024-05-25-140439.png",
+      "description": "Deskripsi foto 7"
+    },
+    {
+      "id": 8,
+      "title": "Foto 8",
+      "url": "https://i.ibb.co.com/cRTFjv6/wallpaperflare-com-wallpaper-4k.jpg",
+      "description": "Deskripsi foto 8"
+    },
+    {
+      "id": 9,
+      "title": "Foto 9",
+      "url": "https://i.ibb.co.com/67VYwxwy/sung-jinwoo-solo-leveling-shadow-army-4k-wallpaper-uhdpaper-com-461-0-e.jpg",
+      "description": "Deskripsi foto 9"
+    }
+  ]
+}
