@@ -1,0 +1,47 @@
+{
+  "name": "Ilham Sidiq",
+  "date": "24 September 2024",
+  "bio": {
+    "text": "I am a result-oriented professional with over six years of experience in electronics and public affairs. With a degree in English Literature, I effectively combine my literary insights with technical skills in software engineering. I am proficient in various technologies, including React.js, Next.js, TypeScript, Python, and MySQL, which enable me to build responsive and efficient web applications. As an interim head at PT. Panasonic Gobel Indonesia, I achieved more than 80% of the improvement targets, demonstrating my ability to enhance team productivity. I believe my commitment to collaboration and excellence in communication are essential to achieving organizational goals. Ambitious and driven, I aim to develop impactful technology solutions as a Software Engineer in a progressive organization, leveraging my unique ability to approach challenges with both creativity and analytical precision."
+  },
+  "intro": {
+    "title": "Intro",
+    "address": [
+      {
+        "icon": "faPhone",
+        "text": "+62822-9500-9833"
+      },
+      {
+        "icon": "faAt",
+        "text": "ilhamsidiq62@gmail.com"
+      },
+      {
+        "icon": "faLocationDot",
+        "text": "Kiaracondong Kota.Bandung Jawa Barat"
+      }
+    ],
+  "graduation": [
+    {
+        "id": 1,
+        "name": "SMKN 2 Baleendah",
+        "major": "Computer and Network Engineering",
+        "fromDate": 2013,
+        "toDate": 2016 
+    },
+    {
+        "id": 2,
+        "name": "Universitas Terbuka",
+        "major": "English literature",
+        "fromDate": "April 2019",
+        "toDate": "Oktober 2023"
+    },
+    {
+        "id": 3,
+        "name": "Bootcamp RevoU",
+        "major": "Software Engineering",
+        "fromDate": "January 2024",
+        "toDate": "August 2024"
+    }
+]
+  }
+}

@@ -43,14 +43,17 @@
     },
 
     {
-        "id": 4,
-        "date": "25 November 2024 - 25 Januari 2025",
-        "title": "Cerdas Financial",
-        "banner": "https://i.ibb.co.com/8DdZdqBM/Screenshot-2025-02-13-132139.png",
-        "description": "Cerdas Financial is a platform that provides financial education resources to help individuals manage their finances better. We offer easy-to-understand content, ranging from budgeting basics to advanced investment strategies, with practical tips and real-life examples to support smarter financial decisions.",
-        "responsibilities":[
-
-        ]
+      "id": 4,
+      "date": "25 November 2024 - 25 Januari 2025",
+      "title": "Cerdas Financial",
+      "banner": "https://i.ibb.co.com/8DdZdqBM/Screenshot-2025-02-13-132139.png",
+      "description": "Cerdas Financial is a platform that provides financial education resources to help individuals manage their finances better. We offer easy-to-understand content, ranging from budgeting basics to advanced investment strategies, with practical tips and real-life examples to support smarter financial decisions.",
+      "responsibilities": [
+        "Implementing the display for the course detail feature and making improvements to ensure the feature is easy to use.",
+        "Collaborating with the development team to enhance the platform's performance, making it more responsive and efficient.",
+        "Maintaining content quality by ensuring the information provided is accurate and up-to-date with the latest financial trends.",
+        "Receiving feedback from users and integrating it to improve the overall user experience on the platform."
+      ]
     }
   ]
 }
