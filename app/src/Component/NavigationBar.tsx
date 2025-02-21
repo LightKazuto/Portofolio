@@ -79,9 +79,9 @@ const NavigationBar: FC<NavigationBarProps> = ({ activeTab, onTabClick }) => {
         >
           <ul className="text-gray-600 flex flex-col space-y-4 py-4 font-segoe font-medium">
             <li
-              onClick={() => onTabClick('Beranda')}
+              onClick={() => onTabClick('Postingan')}
               className={`${
-                activeTab === 'Beranda' ? 'text-blue-500 border-b-4 border-blue-500' : ''
+                activeTab === 'Postingan' ? 'text-blue-500 border-b-4 border-blue-500' : ''
               } hover:text-blue-500 hover:bg-gray-100 rounded-xl cursor-pointer py-4 px-6`}
             >
               Postingan

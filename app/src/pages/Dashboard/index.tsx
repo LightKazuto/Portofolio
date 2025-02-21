@@ -133,12 +133,12 @@ const Dashboard = () => {
               </div>
 
               <div className="flex flex-wrap justify-evenly gap-4">
-                <div className="w-[500px] xl:h-[260px] p-4 bg-white rounded-md shadow-md ">
+                <div className="w-2/3 sm:w-[500px] xl:w-[500px] xl:h-[260px] p-4 bg-white rounded-md shadow-md ">
                   <h3 className="text-lg font-bold font-segoe">
                     {profile.intro.title}
                   </h3>
-                  <div className="text-gray-600 font-segoe mt-4 text-justify">
-                    <ul className="mt-2 space-y-2">
+                  <div className="text-gray-600 font-segoe mt-4 text-left xl:text-justify">
+                    <ul className="mt-2 space-y-2 flex flex-col flex-wrap">
                       {profile.intro.graduation
                         .sort((a, b) => b.id - a.id)
                         .map((grad) => (
@@ -174,9 +174,9 @@ const Dashboard = () => {
                 </div>
 
                 {/* Photos Section */}
-                <div className="w-[500px] bg-white p-4 rounded-md shadow-md xl:mt-4">
+                <div className="w-2/3 sm:w-[500px] xl:w-[500px] xl:h-auto bg-white p-4 rounded-md shadow-md xl:mt-4">
                   <h3 className="text-lg font-bold font-segoe">Foto</h3>
-                  <div className="grid grid-cols-3 gap-4 mt-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
                     {photos && photos.length > 0 ? (
                       photos.map((photo) => (
                         <div

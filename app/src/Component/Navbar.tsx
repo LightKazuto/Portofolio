@@ -8,7 +8,7 @@ import {
 function Navbar() {
   return (
     <div className="w-full shadow-md h-auto flex items-center justify-center text-black p-2 bg-white">
-      <div className="flex space-x-1 items-center w-1/2 justify-evenly">
+      <div className="flex flex-wrap items-center justify-evenly">
         <FontAwesomeIcon
           icon={faBuilding}
           className="text-2xl cursor-pointer hover:bg-gray-100 transition duration-300 px-20 py-3 rounded-md"

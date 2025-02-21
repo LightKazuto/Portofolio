@@ -75,7 +75,7 @@ function Hero({ activeTab, handleTabClick }: HeroProps) {
 
         {/* Button Section */}
         <div className="flex flex-wrap justify-center xl:justify-end font-mono xl:w-full xl:mt-8 xl:h-auto xl:mt-[160px] xl:gap-4 mt-6">
-          <div className="flex justify-center xl:justify-end w-full space-x-4">
+          <div className="flex flex-wrap justify-center xl:justify-end w-full xl:space-x-4 gap-2">
             <button
               onClick={handleDownloadCV}
               className="bg-blue-500 text-white font-bold py-2 px-7 rounded-md hover:bg-blue-600 flex items-center">
