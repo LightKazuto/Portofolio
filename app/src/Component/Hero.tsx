@@ -104,7 +104,7 @@ function Hero({ activeTab, handleTabClick }: HeroProps) {
             <img
               src="https://wallpapers.com/images/hd/4k-programming-background-q1s9mxfdjw4j3t0r.jpg"
               alt="Popup image"
-              className="max-w-4xl max-h-[80vh] object-contain"
+              className="max-w-full max-h-[80vh] object-contain rounded-md"
             />
           </div>
         </div>
@@ -122,7 +122,7 @@ function Hero({ activeTab, handleTabClick }: HeroProps) {
             <img
               src="https://profilepicture7.com/img/img_dongman/3/1382673276.jpg"
               alt="Popup profile image"
-              className="max-w-4xl max-h-[80vh] object-contain"
+              className="max-w-full max-h-[80vh] object-contain rounded-md"
             />
           </div>
         </div>

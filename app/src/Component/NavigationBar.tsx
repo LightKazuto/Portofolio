@@ -48,7 +48,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ activeTab, onTabClick }) => {
               activeTab === 'Video' ? 'text-blue-500 border-b-4 border-blue-500 rounded-none' : ''
             } hover:text-blue-500 hover:bg-gray-100 rounded-md cursor-pointer py-4 px-6`}
           >
-            Video
+            Project
           </li>
         </ul>
 
@@ -108,7 +108,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ activeTab, onTabClick }) => {
                 activeTab === 'Video' ? 'text-blue-500 border-b-4 border-blue-500' : ''
               } hover:text-blue-500 hover:bg-gray-100 rounded-xl cursor-pointer py-4 px-6`}
             >
-              Video
+              Project
             </li>
           </ul>
         </div>

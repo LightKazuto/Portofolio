@@ -33,6 +33,7 @@ interface ProfileData {
     text: string;
   };
   intro: Intro;
+  projects: Project[];
 }
 
 interface Photo {
@@ -42,20 +43,30 @@ interface Photo {
   description: string;
 }
 
+interface Project {
+  id: number;
+  date: string;
+  title: string;
+  banner: string;
+  description: string;
+  responsibilities: string[];
+}
+
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<string>("Postingan");
   const [profile, setProfile] = useState<ProfileData | null>(null);
-  const [photos, setPhotos] = useState<Photo[]>([]);
-
+  const [photos, setPhotos] = useState<Photo[]>([]); // Default to an empty array
+  const [project, setProject] = useState<Project[]>([]); // Default to an empty array
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     fetch("/Tentang.json")
       .then((response) => response.json())
       .then((data) => {
         setProfile(data);
-        setPhotos(data.photos);
+        setPhotos(data.photos || []); // Make sure to default to empty array
       })
       .catch((error) => console.error("Error fetching profile data:", error));
   }, []);
@@ -64,9 +75,32 @@ const Dashboard = () => {
     fetch("/photos.json")
       .then((response) => response.json())
       .then((data) => {
-        setPhotos(data.photos);
+        setPhotos(data.photos || []); // Default to empty array if no photos
       })
       .catch((error) => console.error("Error fetching photos:", error));
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    fetch("/Project.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("project", data);
+        setProject(data.project || []);
+      })
+      .catch((error) => console.error("Error fetching projects:", error));
   }, []);
 
   const handleTabClick = (tabName: string) => {
@@ -92,13 +126,15 @@ const Dashboard = () => {
       case "Postingan":
         return (
           <div className="w-full h-auto flex justify-center items-center mt-4">
-            <div className="xl:flex flex flex-col-reverse xl:flex-row-reverse xl:grid-cols-2 w-[1300px] xl:justify-center justify-between">
-
+            <div className="xl:flex flex flex-col-reverse xl:flex-row-reverse xl:grid-cols-2 w-[1300px] xl:justify-center justify-between gap-4">
               <div className="xl:w-[750px] xl:mt-0 mt-4">
-                <div className="w-[750px] w-full h-auto p-4 bg-white rounded-md shadow-md "> 
-                  <h3 className="text-lg font-bold font-segoe xl:text-left text-center">Postingan</h3>
+                <div className="w-[750px] w-full h-auto p-4 bg-white rounded-md shadow-md ">
+                  <h3 className="text-lg font-bold font-segoe xl:text-left text-center">
+                    Postingan
+                  </h3>
                 </div>
 
+                {/* Render About me */}
                 <div className="xl:w-[750px] h-auto p-4 bg-white rounded-md shadow-md mt-4 xl:items-center">
                   <div className="flex">
                     <img
@@ -114,7 +150,6 @@ const Dashboard = () => {
                         })
                       }
                     />
-
                     <div className="flex flex-col ml-2">
                       <span className="text-black font-segoe font-semibold text-base">
                         {profile.name}
@@ -130,10 +165,70 @@ const Dashboard = () => {
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="flex flex-wrap justify-evenly gap-4">
-                <div className="w-2/3 sm:w-[500px] xl:w-[500px] xl:h-[260px] p-4 bg-white rounded-md shadow-md ">
+                {/* Render Project */}
+                    {project && project.length > 0 ? (
+                      project.map((projectItem: Project) => (
+                        <div
+                          key={projectItem.id}
+                          className="xl:w-[750px] h-auto p-4 bg-white rounded-md shadow-md mt-4 xl:items-center gap-4">
+                          <div className="flex">
+                            <img
+                              src="https://profilepicture7.com/img/img_dongman/3/1382673276.jpg"
+                              alt="Foto Profile"
+                              className="w-12 rounded-full cursor-pointer"
+                              onClick={() =>
+                                handleProfileClick({
+                                  id: 0,
+                                  title: "Profile Image",
+                                  url: "https://profilepicture7.com/img/img_dongman/3/1382673276.jpg",
+                                  description: "Profile image",
+                                })
+                              }
+                            />
+                            <div className="flex flex-col ml-2">
+                              <span className="text-black font-segoe font-semibold text-base">
+                                {profile.name}
+                              </span>
+                              <span className="text-gray-500 font-segoe text-sm font-semibold">
+                                {projectItem.date} . {projectItem.title}
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="mt-2 flex flex-col-reverse gap-4">
+                            <img
+                              src={projectItem.banner}
+                              alt={projectItem.title}
+                              className="w-full h-[250px] object-cover rounded-md"
+                            />
+                          
+                          <p className="text-black mt-2 text-justify">
+                            {projectItem.description}
+                          </p>
+                          </div>
+                          {/* <div className="mt-2">
+                            <h5 className="font-semibold">Responsibilities:</h5>
+                            <ul className="list-disc pl-5">
+                              {projectItem.responsibilities.map(
+                                (responsibility, index) => (
+                                  <li key={index} className="text-gray-700">
+                                    {responsibility}
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          </div> */}
+                        </div>
+                      ))
+                    ) : (
+                      <div>No projects available</div>
+                    )}
+                  </div>
+
+              {/* Render Intro */}
+              <div className="flex flex-wrap xl:flex-col sm:flex-wrap xl:justify-start justify-evenly  gap-4">
+                <div className="w-full sm:w-[500px] xl:w-[500px] xl:h-[260px] p-4 bg-white rounded-md shadow-md ">
                   <h3 className="text-lg font-bold font-segoe">
                     {profile.intro.title}
                   </h3>
@@ -174,22 +269,24 @@ const Dashboard = () => {
                 </div>
 
                 {/* Photos Section */}
-                <div className="w-2/3 sm:w-[500px] xl:w-[500px] xl:h-auto bg-white p-4 rounded-md shadow-md xl:mt-4">
+                <div className="w-full sm:w-[500px] xl:w-[500px] xl:h-auto bg-white p-4 rounded-md shadow-md xl:mt-4">
                   <h3 className="text-lg font-bold font-segoe">Foto</h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
                     {photos && photos.length > 0 ? (
-                      photos.map((photo) => (
-                        <div
-                          key={photo.id}
-                          className="flex flex-col items-center cursor-pointer"
-                          onClick={() => handleProfileClick(photo)}>
-                          <img
-                            src={photo.url}
-                            alt={photo.title}
-                            className="w-full h-[150px] object-cover rounded-md"
-                          />
-                        </div>
-                      ))
+                      (isSmallScreen ? photos.slice(0, 4) : photos).map(
+                        (photo) => (
+                          <div
+                            key={photo.id}
+                            className="flex flex-col items-center cursor-pointer"
+                            onClick={() => handleProfileClick(photo)}>
+                            <img
+                              src={photo.url}
+                              alt={photo.title}
+                              className="w-full h-[150px] object-cover rounded-md"
+                            />
+                          </div>
+                        )
+                      )
                     ) : (
                       <div>No photos available</div>
                     )}
@@ -220,7 +317,7 @@ const Dashboard = () => {
               X
             </button>
             <img
-              src={selectedPhoto.url} // Dynamic image from the clicked photo
+              src={selectedPhoto.url}
               alt={selectedPhoto.title}
               className="max-w-full max-h-[80vh] object-contain rounded-md"
             />
